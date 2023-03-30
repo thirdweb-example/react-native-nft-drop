@@ -11,14 +11,14 @@ const App = () => {
   return (
     <ThirdwebProvider
       activeChain="mumbai"
-      supportedWallets={[MetaMaskWallet, CoinbaseWallet]}>
+      supportedWallets={[metamaskWallet(), coinbaseWallet()]}>
       <AppInner />
     </ThirdwebProvider>
   );
 };
 ```
 
-You can also update the wallets you wish to use with your React Native app (currently `MetaMaskWallet`, `CoinbaseWallet`, `RainbowWallet` and `TrustWallet` are supported).
+You can also update the wallets you wish to use with your React Native app (currently `metamaskWallet()`, `coinbaseWallet()`, `rainbowWallet()` and `trustWallet()` are supported).
 
 The main logic lies in the `Drop.tsx` where we use `Web3Button` to claim the Edition drop:
 
